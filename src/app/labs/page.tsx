@@ -20,6 +20,11 @@ export default function Lab1() {
             Lab 3
           </Link>
         </li>
+        <li>
+          <Link href="/" id="wd-lab3-link">
+            Kambaz
+          </Link>
+        </li>
       </ul>
     </div>
   );
