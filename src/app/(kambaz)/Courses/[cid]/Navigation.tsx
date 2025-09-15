@@ -10,16 +10,16 @@ export default function CourseNavigation() {
         Modules
       </Link>
       <br />
+      <Link href="/Courses/1234/Assignments" id="wd-course-quizzes-link">
+        Assignments
+      </Link>
+      <br />
       <Link href="/Courses/1234/Piazza" id="wd-course-piazza-link">
         Piazza
       </Link>
       <br />
       <Link href="/Courses/1234/Zoom" id="wd-course-zoom-link">
         Zoom
-      </Link>
-      <br />
-      <Link href="/Courses/1234/Assignments" id="wd-course-quizzes-link">
-        Assignments
       </Link>
       <br />
       <Link href="/Courses/1234/Quizzes" id="wd-course-assignments-link">
