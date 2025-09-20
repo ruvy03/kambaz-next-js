@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Lab1 from "./Lab1/page";
 
 export default function Labs() {
   return (
@@ -36,19 +35,26 @@ export default function Labs() {
         <li>
           <Link
             href="https://github.com/ruvy03/kambaz-next-js"
+            target="_blank"
+            rel="noopener noreferrer"
             id="wd-github-link"
           >
             GitHub Repository
           </Link>
         </li>
         <li>
-          <Link href="https://kambaz.dhruvsinha.com" id="wd-kambaz-link">
+          <Link
+            href="https://kambaz.dhruvsinha.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="wd-kambaz-live-link"
+          >
             Kambaz Application
           </Link>
         </li>
       </ul>
       <hr />
-      <Lab1 />
+      <p>Click on the navigation links above to access each lab.</p>
     </div>
   );
 }
