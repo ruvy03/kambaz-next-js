@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Lab1 from "./Lab1/page";
 
 export default function Labs() {
   return (
@@ -54,6 +55,7 @@ export default function Labs() {
         </li>
       </ul>
       <hr />
+      <Lab1 />
     </div>
   );
 }
