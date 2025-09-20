@@ -44,7 +44,7 @@ export default function Labs() {
         </li>
         <li>
           <Link
-            href="https://kambaz.dhruvsinha.com"
+            href="https://kambaz-next-js-five-ivory.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             id="wd-kambaz-live-link"
