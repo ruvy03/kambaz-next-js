@@ -54,7 +54,6 @@ export default function Labs() {
         </li>
       </ul>
       <hr />
-      <p>Click on the navigation links above to access each lab.</p>
     </div>
   );
 }
