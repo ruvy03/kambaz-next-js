@@ -24,12 +24,15 @@ export default function Lab2() {
   return (
     <Container id="wd-lab2">
       <h2>Lab 2 - Cascading Style Sheets</h2>
+      <hr style={{ margin: "2rem 0" }} />
+
       <h3>Styling with the STYLE attribute</h3>
       <p style={{ backgroundColor: "blue", color: "white" }}>
         Style attribute allows configuring look and feel right on the element.
         Although it&apos;s very convenient it is considered bad practice and you
         should avoid using the style attribute
       </p>
+      <hr style={{ margin: "2rem 0" }} />
       <div id="wd-css-id-selectors">
         <h3>ID selectors</h3>
         <p id="wd-id-selector-1">
@@ -76,26 +79,47 @@ export default function Lab2() {
           </div>
         </div>
       </div>
+      <hr style={{ margin: "2rem 0" }} />
       <ForegroundColors />
+      <hr style={{ margin: "2rem 0" }} />
       <BackgroundColors />
+      <hr style={{ margin: "2rem 0" }} />
       <Borders />
+      <hr style={{ margin: "2rem 0" }} />
       <Padding />
+      <hr style={{ margin: "2rem 0" }} />
       <Margins />
+      <hr style={{ margin: "2rem 0" }} />
       <Corners />
+      <hr style={{ margin: "2rem 0" }} />
       <Dimensions />
+      <hr style={{ margin: "2rem 0" }} />
       <Positions />
+      <hr style={{ margin: "2rem 0" }} />
       <AbsolutePosition />
+      <hr style={{ margin: "2rem 0" }} />
       <Zindex />
+      <hr style={{ margin: "2rem 0" }} />
       <Float />
+      <hr style={{ margin: "2rem 0" }} />
       <GridLayout />
+      <hr style={{ margin: "2rem 0" }} />
       <Flex />
+      <hr style={{ margin: "2rem 0" }} />
       <ReactIconsSampler />
+      <hr style={{ margin: "2rem 0" }} />
       <BootstrapGrids />
+      <hr style={{ margin: "2rem 0" }} />
       <ScreenSizeLabel />
+      <hr style={{ margin: "2rem 0" }} />
       <BootstrapTables />
+      <hr style={{ margin: "2rem 0" }} />
       <BootstrapLists />
+      <hr style={{ margin: "2rem 0" }} />
       <BootstrapForms />
+      <hr style={{ margin: "2rem 0" }} />
       <BootstrapNavigation />
+      <hr style={{ margin: "2rem 0" }} />
     </Container>
   );
 }
