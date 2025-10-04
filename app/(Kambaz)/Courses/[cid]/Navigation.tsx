@@ -1,39 +1,52 @@
 import Link from "next/link";
+
 export default function CourseNavigation() {
+  const linkStyle = {
+    textDecoration: "none",
+    fontSize: "1.05em",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    color: "red",
+    marginBottom: "2px",
+    display: "block",
+  };
+
+  const activeLinkStyle = {
+    ...linkStyle,
+    color: "black",
+  };
+
   return (
-    <div id="wd-courses-navigation">
-      <Link href="/Courses/1234/Home" id="wd-course-home-link">
+    <div id="wd-courses-navigation" style={{ width: "150px" }}>
+      <Link href="/Courses/1234/Home" style={linkStyle}>
         Home
       </Link>
-      <br />
-      <Link href="/Courses/1234/Modules" id="wd-course-modules-link">
-        Modules
+      <Link href="/Courses/1234/Modules" style={activeLinkStyle}>
+        <span style={{ borderLeft: "2px solid black", paddingLeft: "5px" }}>
+          Modules
+        </span>
       </Link>
-      <br />
-      <Link href="/Courses/1234/Assignments" id="wd-course-quizzes-link">
-        Assignments
-      </Link>
-      <br />
-      <Link href="https://piazza.com/" id="wd-course-piazza-link">
+      <Link href="https://piazza.com/" style={linkStyle}>
         Piazza
       </Link>
-      <br />
-      <Link href="https://www.zoom.com/" id="wd-course-zoom-link">
-        Zoom
+      <Link href="https://www.zoom.com/" style={linkStyle}>
+        Zoom Meetings
       </Link>
-      <br />
-      <Link href="/Courses/1234/Quizzes" id="wd-course-assignments-link">
+      <Link href="/Courses/1234/Assignments" style={linkStyle}>
+        Assignments
+      </Link>
+      <Link href="/Courses/1234/Quizzes" style={linkStyle}>
         Quizzes
       </Link>
-      <br />
-      <Link href="/Courses/1234/Grades" id="wd-course-grades-link">
+      <Link href="/Courses/1234/Grades" style={linkStyle}>
         Grades
       </Link>
-      <br />
-      <Link href="/Courses/1234/People/Table" id="wd-course-people-link">
+      <Link href="/Courses/1234/People/Table" style={linkStyle}>
         People
       </Link>
-      <br />
+      <Link href="#" style={linkStyle}>
+        Settings
+      </Link>
     </div>
   );
 }
