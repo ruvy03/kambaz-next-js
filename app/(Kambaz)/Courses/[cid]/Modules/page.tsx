@@ -1,120 +1,154 @@
+"use client";
+import { ListGroup } from "react-bootstrap";
+import LessonControlButtons from "./LessonControlButtons";
+import ModuleControlButtons from "./ModuleControlButtons";
+import ModulesControls from "./ModulesControls";
+
 export default function Modules() {
   return (
     <div>
-      <button>Collapse All</button>
-      <button>View Progress</button>
-      <select>
-        <option>Publish All</option>
-        <option>Unpublish All</option>
-      </select>
-      <button>+ Module</button>
+      <ModulesControls />
+      <br />
+      <br />
+      <ListGroup id="wd-modules" className="rounded-0">
+        <ListGroup.Item className="wd-module p-0 mb-5 fs-5 border-secondary">
+          <div
+            className="wd-title p-3 ps-2 d-flex align-items-center"
+            style={{ backgroundColor: "#F2F4F4" }}
+          >
+            <div className="flex-grow-1">Week 1</div>
+            <ModuleControlButtons />
+          </div>
+          <ListGroup className="wd-lessons rounded-0">
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">LEARNING OBJECTIVES</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Introduction to the course
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Learn what is Web Development
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Create a development environment
+              </ListGroup.Item>
+            </ListGroup>
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">READING</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Full Stack Developer - Chapter 1 - Introduction
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Full Stack Developer - Chapter 2 - Creating User
+              </ListGroup.Item>
+            </ListGroup>
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">SLIDES</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Introduction to Web Development
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Creating an HTTP server with Node.js
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Creating a React Application
+              </ListGroup.Item>
+            </ListGroup>
+          </ListGroup>
+        </ListGroup.Item>
 
-      <ul id="wd-modules">
-        <li className="wd-module">
-          <div className="wd-title">Week 1</div>
-          <ul className="wd-lessons">
-            <li className="wd-lesson">
-              <span className="wd-title">LEARNING OBJECTIVES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">Introduction to the course</li>
-                <li className="wd-content-item">
-                  Learn what is Web Development
-                </li>
-                <li className="wd-content-item">
-                  Create a development environment
-                </li>
-              </ul>
-            </li>
-            <li className="wd-lesson">
-              <span className="wd-title">READING</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">
-                  Full Stack Developer - Chapter 1 - Introduction
-                </li>
-                <li className="wd-content-item">
-                  Full Stack Developer - Chapter 2 - Creating User
-                </li>
-              </ul>
-            </li>
-            <li className="wd-lesson">
-              <span className="wd-title">SLIDES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">
-                  Introduction to Web Development
-                </li>
-                <li className="wd-content-item">
-                  Creating an HTTP server with Node.js
-                </li>
-                <li className="wd-content-item">
-                  Creating a React Application
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        <ListGroup.Item
+          className="wd-module p-0 mb-5 fs-5 border-secondary"
+          style={{ borderTop: "1px solid #6c757d" }}
+        >
+          <div
+            className="wd-title p-3 ps-2  d-flex align-items-center"
+            style={{ backgroundColor: "#F2F4F4" }}
+          >
+            <div className="flex-grow-1">Week 2</div>
+            <ModuleControlButtons />
+          </div>
+          <ListGroup className="wd-lessons rounded-0">
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">LEARNING OBJECTIVES</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Learn how to create user interfaces with HTML
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Keep working on Assignment 1
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Deploy the assignment to Netlify
+              </ListGroup.Item>
+            </ListGroup>
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">READING</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Full Stack Developer - Chapter 4 - HTML
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Full Stack Developer - Chapter 5 - CSS
+              </ListGroup.Item>
+            </ListGroup>
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">SLIDES</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Introduction to HTML and the DOM
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Formatting Web content with Headings and
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Formatting content with Lists and Tables
+              </ListGroup.Item>
+            </ListGroup>
+          </ListGroup>
+        </ListGroup.Item>
 
-        <li className="wd-module">
-          <div className="wd-title">Week 2</div>
-          <ul className="wd-lessons">
-            <li className="wd-lesson">
-              <span className="wd-title">LEARNING OBJECTIVES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">
-                  Learn how to create user interfaces with HTML
-                </li>
-                <li className="wd-content-item">
-                  Keep working on Assignment 1
-                </li>
-                <li className="wd-content-item">
-                  Deploy the assignment to Netlify
-                </li>
-              </ul>
-            </li>
-            <li className="wd-lesson">
-              <span className="wd-title">READING</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">
-                  Full Stack Developer - Chapter 4 - HTML
-                </li>
-                <li className="wd-content-item">
-                  Full Stack Developer - Chapter 5 - CSS
-                </li>
-              </ul>
-            </li>
-            <li className="wd-lesson">
-              <span className="wd-title">SLIDES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">
-                  Introduction to HTML and the DOM
-                </li>
-                <li className="wd-content-item">
-                  Formatting Web content with Headings and
-                </li>
-                <li className="wd-content-item">
-                  Formatting content with Lists and Tables
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li className="wd-module">
-          <div className="wd-title">Week 3</div>
-          <ul className="wd-lessons">
-            <li className="wd-lesson">
-              <span className="wd-title">LEARNING OBJECTIVES</span>
-              <ul className="wd-content">
-                <li className="wd-content-item">
-                  Learn how to style web pages with CSS
-                </li>
-                <li className="wd-content-item">
-                  Learn about responsive design
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
+        <ListGroup.Item
+          className="wd-module p-0 mb-5 fs-5 border-secondary"
+          style={{ borderTop: "1px solid #6c757d" }}
+        >
+          <div
+            className="wd-title p-3 ps-2 d-flex align-items-center"
+            style={{ backgroundColor: "#F2F4F4" }}
+          >
+            <div className="flex-grow-1">Week 3</div>
+            <ModuleControlButtons />
+          </div>
+          <ListGroup className="wd-lessons rounded-0">
+            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+              <div className="flex-grow-1">LEARNING OBJECTIVES</div>
+              <LessonControlButtons />
+            </ListGroup.Item>
+            <ListGroup className="wd-content rounded-0">
+              <ListGroup.Item className="p-3 ps-5">
+                Learn how to style web pages with CSS
+              </ListGroup.Item>
+              <ListGroup.Item className="p-3 ps-5">
+                Learn about responsive design
+              </ListGroup.Item>
+            </ListGroup>
+          </ListGroup>
+        </ListGroup.Item>
+      </ListGroup>
     </div>
   );
 }
