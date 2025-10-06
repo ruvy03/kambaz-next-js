@@ -134,7 +134,30 @@ export default function AssignmentEditor() {
               <FormLabel htmlFor="wd-assign-to">
                 <strong>Assign to</strong>
               </FormLabel>
-              <FormControl id="wd-assign-to" defaultValue="Everyone" />
+              <FormControl
+                id="wd-assign-to"
+                defaultValue="Everyone"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "8px",
+                }}
+                as="div"
+              >
+                <span
+                  className="badge bg-light text-dark border d-inline-flex align-items-center"
+                  style={{ fontSize: "14px", padding: "6px 10px" }}
+                >
+                  Everyone
+                  <button
+                    type="button"
+                    className="btn-close ms-2"
+                    style={{ fontSize: "10px" }}
+                    aria-label="Close"
+                  ></button>
+                </span>
+              </FormControl>
             </div>
 
             <div className="mb-3">
@@ -177,7 +200,14 @@ export default function AssignmentEditor() {
       <hr />
 
       <div className="d-flex justify-content-end mb-3">
-        <Button variant="secondary" className="me-2">
+        <Button
+          style={{
+            backgroundColor: "#F2F4F4",
+            color: "#000",
+            border: "1px solid #ced4da",
+          }}
+          className="me-2"
+        >
           Cancel
         </Button>
         <Button variant="danger">Save</Button>

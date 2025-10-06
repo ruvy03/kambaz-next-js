@@ -28,17 +28,21 @@ export default function CourseNavigation({
       id="wd-courses-navigation"
       style={{ width: isMobile ? "120px" : "150px" }}
     >
-      <Link href="/Courses/1234/Home" style={linkStyle} onClick={onLinkClick}>
-        Home
-      </Link>
       <Link
-        href="/Courses/1234/Modules"
+        href="/Courses/1234/Home"
         style={activeLinkStyle}
         onClick={onLinkClick}
       >
         <span style={{ borderLeft: "2px solid black", paddingLeft: "5px" }}>
-          Modules
+          Home
         </span>
+      </Link>
+      <Link
+        href="/Courses/1234/Modules"
+        style={linkStyle}
+        onClick={onLinkClick}
+      >
+        Modules
       </Link>
       <Link href="#" style={linkStyle} onClick={onLinkClick}>
         Piazza

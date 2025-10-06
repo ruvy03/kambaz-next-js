@@ -10,9 +10,7 @@ import CourseNavigation from "./Navigation";
 
 export default function CoursesLayout({
   children,
-  params,
-}: Readonly<{ children: ReactNode; params: { cid: string } }>) {
-  const { cid } = params;
+}: Readonly<{ children: ReactNode }>) {
   const courseName = "CS5610.18616.202610";
 
   const [showKambazNav, setShowKambazNav] = useState(false);

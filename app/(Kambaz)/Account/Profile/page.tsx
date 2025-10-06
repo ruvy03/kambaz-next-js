@@ -8,7 +8,7 @@ export default function Profile() {
       <div id="wd-profile-screen">
         <h3>Profile</h3>
         <FormControl
-          defaultValue="alice"
+          defaultValue="dhruv"
           placeholder="username"
           className="wd-username mb-2"
         />
@@ -19,25 +19,25 @@ export default function Profile() {
           className="wd-password mb-2"
         />
         <FormControl
-          defaultValue="Alice"
+          defaultValue="Dhruv"
           placeholder="First Name"
           id="wd-firstname"
           className="mb-2"
         />
         <FormControl
-          defaultValue="Wonderland"
+          defaultValue="Sinha"
           placeholder="Last Name"
           id="wd-lastname"
           className="mb-2"
         />
         <FormControl
-          defaultValue="2000-01-01"
+          defaultValue="2003-09-06"
           type="date"
           id="wd-dob"
           className="mb-2"
         />
         <FormControl
-          defaultValue="alice@wonderland"
+          defaultValue="sinha.dh@northeastern.edu"
           type="email"
           id="wd-email"
           className="mb-2"

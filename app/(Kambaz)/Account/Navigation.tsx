@@ -7,7 +7,7 @@ export default function AccountNavigation() {
         href="/Account/Signin"
         style={{
           textDecoration: "none",
-          fontSize: "1.05em",
+          fontSize: "1.1em",
           paddingLeft: "10px",
           paddingRight: "10px",
           color: "black",
@@ -23,7 +23,7 @@ export default function AccountNavigation() {
         href="/Account/Signup"
         style={{
           textDecoration: "none",
-          fontSize: "1.05em",
+          fontSize: "1.1em",
           paddingLeft: "10px",
           paddingRight: "10px",
           color: "red",

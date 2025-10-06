@@ -25,18 +25,18 @@ export default function KambazNavigation() {
         as={Link}
         href="/Account"
         className="text-center border-0"
-        style={{ backgroundColor: "white", color: "red", padding: "10px 0" }}
+        style={{ backgroundColor: "black", color: "white", padding: "10px 0" }}
       >
         <FaRegCircleUser className="fs-2" />
         <br />
-        <small style={{ fontSize: "0.7em", color: "red" }}>Account</small>
+        <small style={{ fontSize: "0.7em", color: "white" }}>Account</small>
       </ListGroupItem>
 
       <ListGroupItem
         as={Link}
         href="/Dashboard"
         className="text-center border-0"
-        style={{ backgroundColor: "black", color: "white", padding: "10px 0" }}
+        style={{ backgroundColor: "white", color: "red", padding: "10px 0" }}
       >
         <AiOutlineDashboard className="fs-2" style={{ color: "red" }} />
         <br />

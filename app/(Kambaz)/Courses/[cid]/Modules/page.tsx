@@ -1,5 +1,6 @@
 "use client";
 import { ListGroup } from "react-bootstrap";
+import { BsGripVertical } from "react-icons/bs";
 import LessonControlButtons from "./LessonControlButtons";
 import ModuleControlButtons from "./ModuleControlButtons";
 import ModulesControls from "./ModulesControls";
@@ -16,49 +17,95 @@ export default function Modules() {
             className="wd-title p-3 ps-2 d-flex align-items-center"
             style={{ backgroundColor: "#F2F4F4" }}
           >
+            <BsGripVertical className="me-2 fs-3" />
             <div className="flex-grow-1">Week 1</div>
             <ModuleControlButtons />
           </div>
           <ListGroup className="wd-lessons rounded-0">
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
               <div className="flex-grow-1">LEARNING OBJECTIVES</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Introduction to the course
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Learn what is Web Development
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Create a development environment
               </ListGroup.Item>
             </ListGroup>
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
+
               <div className="flex-grow-1">READING</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Full Stack Developer - Chapter 1 - Introduction
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Full Stack Developer - Chapter 2 - Creating User
               </ListGroup.Item>
             </ListGroup>
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
               <div className="flex-grow-1">SLIDES</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Introduction to Web Development
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Creating an HTTP server with Node.js
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Creating a React Application
               </ListGroup.Item>
             </ListGroup>
@@ -73,49 +120,98 @@ export default function Modules() {
             className="wd-title p-3 ps-2  d-flex align-items-center"
             style={{ backgroundColor: "#F2F4F4" }}
           >
+            <BsGripVertical className="me-2 fs-3" />
+
             <div className="flex-grow-1">Week 2</div>
             <ModuleControlButtons />
           </div>
           <ListGroup className="wd-lessons rounded-0">
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
+
               <div className="flex-grow-1">LEARNING OBJECTIVES</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Learn how to create user interfaces with HTML
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Keep working on Assignment 1
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Deploy the assignment to Netlify
               </ListGroup.Item>
             </ListGroup>
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
+
               <div className="flex-grow-1">READING</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Full Stack Developer - Chapter 4 - HTML
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Full Stack Developer - Chapter 5 - CSS
               </ListGroup.Item>
             </ListGroup>
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
+
               <div className="flex-grow-1">SLIDES</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Introduction to HTML and the DOM
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Formatting Web content with Headings and
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Formatting content with Lists and Tables
               </ListGroup.Item>
             </ListGroup>
@@ -130,19 +226,33 @@ export default function Modules() {
             className="wd-title p-3 ps-2 d-flex align-items-center"
             style={{ backgroundColor: "#F2F4F4" }}
           >
+            <BsGripVertical className="me-2 fs-3" />
             <div className="flex-grow-1">Week 3</div>
             <ModuleControlButtons />
           </div>
           <ListGroup className="wd-lessons rounded-0">
-            <ListGroup.Item className="wd-lesson p-3 ps-4 d-flex align-items-center">
+            <ListGroup.Item
+              className="wd-lesson p-3 ps-2 d-flex align-items-center"
+              style={{ borderLeft: "4px solid green" }}
+            >
+              <BsGripVertical className="me-2 fs-3" />
+
               <div className="flex-grow-1">LEARNING OBJECTIVES</div>
               <LessonControlButtons />
             </ListGroup.Item>
             <ListGroup className="wd-content rounded-0">
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Learn how to style web pages with CSS
               </ListGroup.Item>
-              <ListGroup.Item className="p-3 ps-5">
+              <ListGroup.Item
+                className="p-3 ps-2"
+                style={{ borderLeft: "4px solid green" }}
+              >
+                <BsGripVertical className="me-2 fs-3" />
                 Learn about responsive design
               </ListGroup.Item>
             </ListGroup>
