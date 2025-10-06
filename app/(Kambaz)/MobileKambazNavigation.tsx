@@ -5,9 +5,8 @@ import {
   FaBook,
   FaCalendarAlt,
   FaChevronRight,
-  FaHistory,
+  FaCog,
   FaInbox,
-  FaQuestionCircle,
   FaTachometerAlt,
   FaUserCircle,
 } from "react-icons/fa";
@@ -24,7 +23,7 @@ export default function MobileKambazNavigation() {
 
   const iconStyle = {
     marginRight: "15px",
-    width: "24px", // Ensures icons align vertically
+    width: "24px",
   };
 
   const chevronStyle = {
@@ -34,14 +33,14 @@ export default function MobileKambazNavigation() {
 
   return (
     <div id="wd-mobile-kambaz-navigation">
-      <Link href="/Dashboard" style={linkStyle}>
-        <FaTachometerAlt className="fs-4" style={iconStyle} />
-        <span>Dashboard</span>
-      </Link>
       <Link href="/Account" style={linkStyle}>
         <FaUserCircle className="fs-4" style={iconStyle} />
         <span>Account</span>
         <FaChevronRight style={chevronStyle} />
+      </Link>
+      <Link href="/Dashboard" style={linkStyle}>
+        <FaTachometerAlt className="fs-4" style={iconStyle} />
+        <span>Dashboard</span>
       </Link>
       <Link href="/Courses" style={linkStyle}>
         <FaBook className="fs-4" style={iconStyle} />
@@ -59,15 +58,9 @@ export default function MobileKambazNavigation() {
           22
         </Badge>
       </Link>
-      <Link href="#" style={linkStyle}>
-        <FaHistory className="fs-4" style={iconStyle} />
-        <span>History</span>
-        <FaChevronRight style={chevronStyle} />
-      </Link>
-      <Link href="#" style={linkStyle}>
-        <FaQuestionCircle className="fs-4" style={iconStyle} />
-        <span>Help</span>
-        <FaChevronRight style={chevronStyle} />
+      <Link href="/Labs" style={linkStyle}>
+        <FaCog className="fs-4" style={iconStyle} />
+        <span>Labs</span>
       </Link>
     </div>
   );
