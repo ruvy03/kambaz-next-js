@@ -65,7 +65,6 @@ export default function KambazNavigation() {
         <small style={{ fontSize: "0.7em" }}>Calendar</small>
       </ListGroupItem>
 
-      {/* Inbox Link - Hardcoded as INACTIVE */}
       <ListGroupItem
         as={Link}
         href="/Inbox"

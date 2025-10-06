@@ -8,9 +8,13 @@ export default function KambazLayout({
   return (
     <div id="wd-kambaz">
       <div className="d-flex">
-        <KambazNavigation />
+        {/* This is the sidebar for DESKTOP view */}
+        <div className="d-none d-md-block">
+          <KambazNavigation />
+        </div>
 
-        <div className="wd-main-content-offset p-3 flex-fill">{children}</div>
+        {/* This is the main content area */}
+        <div className="wd-main-content-offset flex-fill">{children}</div>
       </div>
     </div>
   );
