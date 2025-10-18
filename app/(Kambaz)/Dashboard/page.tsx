@@ -4,7 +4,19 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button, Card, Col, Offcanvas, Row } from "react-bootstrap";
 import { FaAlignJustify, FaPencilAlt } from "react-icons/fa";
+import * as dbImported from "../Database";
 import MobileKambazNavigation from "../MobileKambazNavigation";
+type Course = {
+  _id: string;
+  name: string;
+  number: string;
+  image: string;
+  fit?: "contain" | "cover";
+  description?: string;
+  term?: string;
+};
+
+const db: { courses: Course[] } = dbImported as { courses: Course[] };
 
 export default function Dashboard() {
   const [showKambazNav, setShowKambazNav] = useState(false);
@@ -14,7 +26,6 @@ export default function Dashboard() {
 
   return (
     <div>
-      {/* Mobile header - only visible on small screens */}
       <div className="d-block d-md-none p-3 bg-dark text-white text-center">
         <div className="d-flex justify-content-between align-items-center">
           <Button variant="dark" onClick={handleShowKambazNav}>
@@ -23,14 +34,16 @@ export default function Dashboard() {
           <div className="text-center">
             <small>KAMBAZ</small>
           </div>
-          <div style={{ width: "40px" }}></div> {/* Spacer for centering */}
+          <div style={{ width: "40px" }}></div>
         </div>
       </div>
 
       <div id="wd-dashboard" className="p-4">
         <h1 id="wd-dashboard-title">Dashboard</h1>
         <hr />
-        <h2 id="wd-dashboard-published">Published Courses (7)</h2>
+        <h2 id="wd-dashboard-published">
+          Published Courses ({db.courses.length})
+        </h2>
         <hr />
 
         <Row
@@ -41,278 +54,49 @@ export default function Dashboard() {
           className="g-4"
           id="wd-dashboard-courses"
         >
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/1234" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/react.png"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "contain" }}
-                    alt="React JS Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS1234 React JS
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Full Stack software developer
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/4321" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/ai.jpg"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "cover" }}
-                    alt="Artificial Intelligence Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS4321 Artificial Intelligence
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Foundations of AI and intelligent systems
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/8765" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/ml.png"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "cover" }}
-                    alt="Machine Learning Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS8765 Machine Learning
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Principles and applications of ML
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/5678" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/web.jpg"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "cover" }}
-                    alt="Web Development Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS5678 Web Development
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Modern web technologies
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/9101" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/pdp.webp"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "cover" }}
-                    alt="PDP Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS5010 PDP
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Programming Design Paradigms
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/1121" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/algo.png"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "contain" }}
-                    alt="Algorithms Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS1121 Algorithms
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Algorithm design and analysis
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card className="h-100">
-              <Link href="/Courses/3141" className="text-decoration-none">
-                <div style={{ position: "relative" }}>
-                  <Card.Img
-                    as={Image}
-                    variant="top"
-                    src="/images/dbms.jpg"
-                    width={400}
-                    height={150}
-                    style={{ objectFit: "cover" }}
-                    alt="DBMS Course"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title
-                    className="text-primary text-truncate"
-                    style={{ fontSize: "0.9rem", fontWeight: "bold" }}
-                  >
-                    CS3141 DBMS
-                  </Card.Title>
-                  <Card.Text
-                    className="text-secondary fw-bold text-truncate"
-                    style={{ fontSize: "0.9rem" }}
-                  >
-                    Database Management Systems
-                  </Card.Text>
-                  <Card.Text
-                    className="text-secondary text-truncate"
-                    style={{ fontSize: "0.8rem" }}
-                  >
-                    Fall 2025
-                  </Card.Text>
-                  <FaPencilAlt className="fs-5 text-secondary" />
-                </Card.Body>
-              </Link>
-            </Card>
-          </Col>
+          {db.courses.map((c) => (
+            <Col key={c._id}>
+              <Card className="h-100">
+                <Link
+                  href={`/Courses/${c._id}`}
+                  className="text-decoration-none"
+                >
+                  <div style={{ position: "relative" }}>
+                    <Card.Img
+                      as={Image}
+                      variant="top"
+                      src={c.image}
+                      width={400}
+                      height={150}
+                      style={{ objectFit: c.fit ? c.fit : "cover" }}
+                      alt={`${c.name} Course`}
+                    />
+                  </div>
+                  <Card.Body>
+                    <Card.Title
+                      className="text-primary text-truncate"
+                      style={{ fontSize: "0.9rem", fontWeight: "bold" }}
+                    >
+                      {c.number} {c.name}
+                    </Card.Title>
+                    <Card.Text
+                      className="text-secondary fw-bold text-truncate"
+                      style={{ fontSize: "0.9rem" }}
+                    >
+                      {c.description}
+                    </Card.Text>
+                    <Card.Text
+                      className="text-secondary text-truncate"
+                      style={{ fontSize: "0.8rem" }}
+                    >
+                      {c.term}
+                    </Card.Text>
+                    <FaPencilAlt className="fs-5 text-secondary" />
+                  </Card.Body>
+                </Link>
+              </Card>
+            </Col>
+          ))}
         </Row>
 
         {/* Mobile Kambaz Navigation Offcanvas */}

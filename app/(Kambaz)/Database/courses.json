@@ -1,0 +1,60 @@
+[
+      {
+        "_id": "1234",
+        "name": "CS1234 React JS",
+        "number": "CS1234",
+        "image": "/images/react.png",
+        "fit": "contain",
+        "description": "Full Stack software developer",
+        "term": "Fall 2025"
+      },
+      {
+        "_id": "4321",
+        "name": "CS4321 Artificial Intelligence",
+        "number": "CS4321",
+        "image": "/images/ai.jpg",
+        "description": "Foundations of AI and intelligent systems",
+        "term": "Fall 2025"
+      },
+      {
+        "_id": "8765",
+        "name": "CS8765 Machine Learning",
+        "number": "CS8765",
+        "image": "/images/ml.png",
+        "description": "Principles and applications of ML",
+        "term": "Fall 2025"
+      },
+      {
+        "_id": "5678",
+        "name": "CS5678 Web Development",
+        "number": "CS5678",
+        "image": "/images/web.jpg",
+        "description": "Modern web technologies",
+        "term": "Fall 2025"
+      },
+      {
+        "_id": "9101",
+        "name": "CS5010 PDP",
+        "number": "CS5010",
+        "image": "/images/pdp.webp",
+        "description": "Programming Design Paradigms",
+        "term": "Fall 2025"
+      },
+      {
+        "_id": "1121",
+        "name": "CS1121 Algorithms",
+        "number": "CS1121",
+        "image": "/images/algo.png",
+        "fit": "contain",
+        "description": "Algorithm design and analysis",
+        "term": "Fall 2025"
+      },
+      {
+        "_id": "3141",
+        "name": "CS3141 DBMS",
+        "number": "CS3141",
+        "image": "/images/dbms.jpg",
+        "description": "Database Management Systems",
+        "term": "Fall 2025"
+      }
+    ]
