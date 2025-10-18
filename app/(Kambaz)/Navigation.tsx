@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { AiOutlineDashboard } from "react-icons/ai";
@@ -31,7 +31,7 @@ export default function KambazNavigation() {
         className="bg-black border-0 text-center"
       >
         <Image
-          src="/images/NEU.png"
+          src="/images/neu.png"
           width={75}
           height={75}
           alt="Northeastern University"
