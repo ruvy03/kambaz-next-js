@@ -1,82 +1,63 @@
 "use client";
+
 import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
+import { ListGroup } from "react-bootstrap";
+
+interface NavigationProps {
+  onLinkClick?: () => void;
+  isMobile?: boolean;
+}
 
 export default function CourseNavigation({
   onLinkClick,
-  isMobile,
-}: {
-  onLinkClick?: () => void;
-  isMobile?: boolean;
-}) {
-  const linkStyle = {
-    textDecoration: "none",
-    color: "red",
-    // FIXED: Font size is now conditional
-    fontSize: isMobile ? "1em" : "1.1em",
-    display: "block",
-    padding: "5px 10px",
-  };
+  isMobile = false,
+}: NavigationProps) {
+  const { cid } = useParams();
+  const pathname = usePathname();
 
-  const activeLinkStyle = {
-    ...linkStyle,
-    color: "black",
-    fontWeight: "bold" as const,
+  const links = [
+    "Home",
+    "Modules",
+    "Piazza",
+    "Zoom",
+    "Assignments",
+    "Quizzes",
+    "Grades",
+    "People",
+  ];
+
+  const isActive = (link: string) => {
+    return pathname.includes(`/Courses/${cid}/${link}`);
   };
 
   return (
-    <div
-      id="wd-courses-navigation"
-      style={{ width: isMobile ? "120px" : "150px" }}
+    <ListGroup
+      className={`${isMobile ? "w-100" : ""}`}
+      style={!isMobile ? { minWidth: "220px" } : {}}
     >
-      <Link
-        href="/Courses/1234/Home"
-        style={activeLinkStyle}
-        onClick={onLinkClick}
-      >
-        <span style={{ borderLeft: "2px solid black", paddingLeft: "5px" }}>
-          Home
-        </span>
-      </Link>
-      <Link
-        href="/Courses/1234/Modules"
-        style={linkStyle}
-        onClick={onLinkClick}
-      >
-        Modules
-      </Link>
-      <Link href="#" style={linkStyle} onClick={onLinkClick}>
-        Piazza
-      </Link>
-      <Link href="#" style={linkStyle} onClick={onLinkClick}>
-        Zoom Meetings
-      </Link>
-      <Link
-        href="/Courses/1234/Assignments"
-        style={linkStyle}
-        onClick={onLinkClick}
-      >
-        Assignments
-      </Link>
-      <Link
-        href="/Courses/1234/Quizzes"
-        style={linkStyle}
-        onClick={onLinkClick}
-      >
-        Quizzes
-      </Link>
-      <Link href="/Courses/1234/Grades" style={linkStyle} onClick={onLinkClick}>
-        Grades
-      </Link>
-      <Link
-        href="/Courses/1234/People/Table"
-        style={linkStyle}
-        onClick={onLinkClick}
-      >
-        People
-      </Link>
-      <Link href="#" style={linkStyle} onClick={onLinkClick}>
-        Settings
-      </Link>
-    </div>
+      {links.map((link) => (
+        <Link
+          key={link}
+          href={`/Courses/${cid}/${link}`}
+          className="text-decoration-none"
+          onClick={onLinkClick}
+        >
+          <ListGroup.Item
+            action
+            active={isActive(link)}
+            className={`border border-0 ${
+              isActive(link) ? "text-black" : "text-danger"
+            }`}
+            style={{
+              backgroundColor: isActive(link) ? "white" : "transparent",
+              borderLeft: isActive(link) ? "3px solid black" : "none",
+            }}
+          >
+            {link}
+          </ListGroup.Item>
+        </Link>
+      ))}
+    </ListGroup>
   );
 }

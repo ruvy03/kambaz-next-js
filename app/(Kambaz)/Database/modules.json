@@ -1,0 +1,558 @@
+[
+  {
+    "_id": "M101",
+    "name": "Week 1",
+    "course": "1234",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M101",
+        "content": [
+          "Introduction to the course",
+          "Learn what is React Development",
+          "Create a development environment"
+        ]
+      },
+      {
+        "_id": "L102",
+        "name": "READING",
+        "module": "M101",
+        "content": [
+          "React Developer - Chapter 1 - Introduction",
+          "React Developer - Chapter 2 - Creating Components"
+        ]
+      },
+      {
+        "_id": "L103",
+        "name": "SLIDES",
+        "module": "M101",
+        "content": [
+          "Introduction to React Development",
+          "Creating an React Application with Next.js",
+          "Building Your First Component"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Week 2",
+    "course": "1234",
+    "lessons": [
+      {
+        "_id": "L201",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M102",
+        "content": [
+          "Learn about React Hooks",
+          "Keep working on Assignment 1",
+          "Deploy the assignment to Vercel"
+        ]
+      },
+      {
+        "_id": "L202",
+        "name": "READING",
+        "module": "M102",
+        "content": [
+          "React Developer - Chapter 3 - State Management",
+          "React Developer - Chapter 4 - Effects"
+        ]
+      },
+      {
+        "_id": "L203",
+        "name": "SLIDES",
+        "module": "M102",
+        "content": [
+          "Understanding useState and useEffect",
+          "Managing Component State",
+          "Side Effects in React"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Week 3",
+    "course": "1234",
+    "lessons": [
+      {
+        "_id": "L301",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M103",
+        "content": [
+          "Learn about React Context API",
+          "Understand component composition"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "Introduction to AI",
+    "course": "4321",
+    "lessons": [
+      {
+        "_id": "L401",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M201",
+        "content": [
+          "Understanding AI fundamentals",
+          "History of Artificial Intelligence",
+          "AI vs Machine Learning vs Deep Learning"
+        ]
+      },
+      {
+        "_id": "L402",
+        "name": "READING",
+        "module": "M201",
+        "content": [
+          "AI Textbook - Chapter 1 - Introduction",
+          "AI Textbook - Chapter 2 - Intelligent Agents"
+        ]
+      },
+      {
+        "_id": "L403",
+        "name": "SLIDES",
+        "module": "M201",
+        "content": [
+          "What is Artificial Intelligence?",
+          "AI Applications in the Real World",
+          "Foundations of AI"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Search Algorithms",
+    "course": "4321",
+    "lessons": [
+      {
+        "_id": "L501",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M202",
+        "content": [
+          "Learn about uninformed search strategies",
+          "Understand informed search algorithms",
+          "Implement A* search"
+        ]
+      },
+      {
+        "_id": "L502",
+        "name": "READING",
+        "module": "M202",
+        "content": [
+          "AI Textbook - Chapter 3 - Problem Solving",
+          "AI Textbook - Chapter 4 - Search Algorithms"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "Knowledge Representation",
+    "course": "4321",
+    "lessons": [
+      {
+        "_id": "L601",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M203",
+        "content": [
+          "Understanding logic and reasoning",
+          "Knowledge-based agents"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M301",
+    "name": "Supervised Learning",
+    "course": "8765",
+    "lessons": [
+      {
+        "_id": "L701",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M301",
+        "content": [
+          "Introduction to supervised learning",
+          "Linear regression fundamentals",
+          "Classification algorithms"
+        ]
+      },
+      {
+        "_id": "L702",
+        "name": "READING",
+        "module": "M301",
+        "content": [
+          "ML Textbook - Chapter 1 - Introduction to ML",
+          "ML Textbook - Chapter 2 - Regression"
+        ]
+      },
+      {
+        "_id": "L703",
+        "name": "SLIDES",
+        "module": "M301",
+        "content": [
+          "Supervised vs Unsupervised Learning",
+          "Linear Regression Explained",
+          "Gradient Descent Algorithm"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Neural Networks",
+    "course": "8765",
+    "lessons": [
+      {
+        "_id": "L801",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M302",
+        "content": [
+          "Understanding neural network architecture",
+          "Backpropagation algorithm",
+          "Training deep networks"
+        ]
+      },
+      {
+        "_id": "L802",
+        "name": "READING",
+        "module": "M302",
+        "content": [
+          "ML Textbook - Chapter 5 - Neural Networks",
+          "Deep Learning - Chapter 1"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Model Evaluation",
+    "course": "8765",
+    "lessons": [
+      {
+        "_id": "L901",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M303",
+        "content": [
+          "Cross-validation techniques",
+          "Metrics for model evaluation"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M401",
+    "name": "HTML & CSS Basics",
+    "course": "5678",
+    "lessons": [
+      {
+        "_id": "L1001",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M401",
+        "content": [
+          "Learn HTML structure and elements",
+          "Understanding CSS selectors",
+          "Build your first webpage"
+        ]
+      },
+      {
+        "_id": "L1002",
+        "name": "READING",
+        "module": "M401",
+        "content": [
+          "Web Dev Book - Chapter 1 - HTML Fundamentals",
+          "Web Dev Book - Chapter 2 - CSS Styling"
+        ]
+      },
+      {
+        "_id": "L1003",
+        "name": "SLIDES",
+        "module": "M401",
+        "content": [
+          "Introduction to HTML",
+          "CSS Box Model",
+          "Flexbox and Grid Layouts"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "JavaScript Fundamentals",
+    "course": "5678",
+    "lessons": [
+      {
+        "_id": "L1101",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M402",
+        "content": [
+          "JavaScript syntax and data types",
+          "DOM manipulation",
+          "Event handling"
+        ]
+      },
+      {
+        "_id": "L1102",
+        "name": "READING",
+        "module": "M402",
+        "content": [
+          "JavaScript Book - Chapter 1 - Basics",
+          "JavaScript Book - Chapter 2 - DOM"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M403",
+    "name": "Responsive Design",
+    "course": "5678",
+    "lessons": [
+      {
+        "_id": "L1201",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M403",
+        "content": [
+          "Mobile-first design principles",
+          "Media queries and breakpoints"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M501",
+    "name": "Object-Oriented Design",
+    "course": "9101",
+    "lessons": [
+      {
+        "_id": "L1301",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M501",
+        "content": [
+          "Understanding OOP principles",
+          "Classes and objects",
+          "Inheritance and polymorphism"
+        ]
+      },
+      {
+        "_id": "L1302",
+        "name": "READING",
+        "module": "M501",
+        "content": [
+          "PDP Book - Chapter 1 - OOP Basics",
+          "PDP Book - Chapter 2 - Design Patterns"
+        ]
+      },
+      {
+        "_id": "L1303",
+        "name": "SLIDES",
+        "module": "M501",
+        "content": [
+          "Introduction to OOP",
+          "SOLID Principles",
+          "Design Patterns Overview"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M502",
+    "name": "Functional Programming",
+    "course": "9101",
+    "lessons": [
+      {
+        "_id": "L1401",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M502",
+        "content": [
+          "Immutability and pure functions",
+          "Higher-order functions",
+          "Lambda expressions"
+        ]
+      },
+      {
+        "_id": "L1402",
+        "name": "READING",
+        "module": "M502",
+        "content": [
+          "PDP Book - Chapter 5 - Functional Programming",
+          "FP Guide - Chapter 1"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M503",
+    "name": "Testing and Debugging",
+    "course": "9101",
+    "lessons": [
+      {
+        "_id": "L1501",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M503",
+        "content": [
+          "Unit testing strategies",
+          "Debugging techniques"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M601",
+    "name": "Algorithm Analysis",
+    "course": "1121",
+    "lessons": [
+      {
+        "_id": "L1601",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M601",
+        "content": [
+          "Big O notation",
+          "Time and space complexity",
+          "Analyzing algorithm efficiency"
+        ]
+      },
+      {
+        "_id": "L1602",
+        "name": "READING",
+        "module": "M601",
+        "content": [
+          "Algorithms Book - Chapter 1 - Introduction",
+          "Algorithms Book - Chapter 2 - Analysis"
+        ]
+      },
+      {
+        "_id": "L1603",
+        "name": "SLIDES",
+        "module": "M601",
+        "content": [
+          "Introduction to Algorithm Analysis",
+          "Asymptotic Notation",
+          "Recurrence Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M602",
+    "name": "Sorting Algorithms",
+    "course": "1121",
+    "lessons": [
+      {
+        "_id": "L1701",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M602",
+        "content": [
+          "Comparison-based sorting",
+          "QuickSort and MergeSort",
+          "Non-comparison sorts"
+        ]
+      },
+      {
+        "_id": "L1702",
+        "name": "READING",
+        "module": "M602",
+        "content": [
+          "Algorithms Book - Chapter 3 - Sorting",
+          "Algorithms Book - Chapter 4 - Advanced Sorting"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M603",
+    "name": "Graph Algorithms",
+    "course": "1121",
+    "lessons": [
+      {
+        "_id": "L1801",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M603",
+        "content": [
+          "Graph representations",
+          "BFS and DFS traversals"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M701",
+    "name": "Relational Databases",
+    "course": "3141",
+    "lessons": [
+      {
+        "_id": "L1901",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M701",
+        "content": [
+          "Understanding relational model",
+          "Database design principles",
+          "Normalization techniques"
+        ]
+      },
+      {
+        "_id": "L1902",
+        "name": "READING",
+        "module": "M701",
+        "content": [
+          "DBMS Book - Chapter 1 - Introduction",
+          "DBMS Book - Chapter 2 - Relational Model"
+        ]
+      },
+      {
+        "_id": "L1903",
+        "name": "SLIDES",
+        "module": "M701",
+        "content": [
+          "Introduction to Databases",
+          "ER Diagrams",
+          "Normalization Forms"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M702",
+    "name": "SQL and Queries",
+    "course": "3141",
+    "lessons": [
+      {
+        "_id": "L2001",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M702",
+        "content": [
+          "SQL syntax and commands",
+          "Complex queries and joins",
+          "Query optimization"
+        ]
+      },
+      {
+        "_id": "L2002",
+        "name": "READING",
+        "module": "M702",
+        "content": [
+          "DBMS Book - Chapter 3 - SQL",
+          "DBMS Book - Chapter 4 - Advanced Queries"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "M703",
+    "name": "Transaction Management",
+    "course": "3141",
+    "lessons": [
+      {
+        "_id": "L2101",
+        "name": "LEARNING OBJECTIVES",
+        "module": "M703",
+        "content": [
+          "ACID properties",
+          "Concurrency control"
+        ]
+      }
+    ]
+  }
+]

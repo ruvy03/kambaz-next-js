@@ -1,20 +1,27 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { ReactNode, useEffect, useState } from "react";
 import { Button, Collapse, Offcanvas } from "react-bootstrap";
 import { FaAlignJustify, FaChevronDown } from "react-icons/fa6";
-
-import Link from "next/link";
 import MobileKambazNavigation from "../../../(Kambaz)/MobileKambazNavigation";
+import * as db from "../../Database";
+import Breadcrumb from "./Breadcrumb/page";
 import CourseNavigation from "./Navigation";
 
 export default function CoursesLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
-  const courseName = "CS5610.18616.202610";
-
+  const { cid } = useParams();
+  const [course, setCourse] = useState<any>(null);
   const [showKambazNav, setShowKambazNav] = useState(false);
   const [isCourseNavOpen, setIsCourseNavOpen] = useState(false);
+
+  useEffect(() => {
+    const foundCourse = db.courses.find((course: any) => course._id === cid);
+    setCourse(foundCourse);
+  }, [cid]);
 
   const handleShowKambazNav = () => setShowKambazNav(true);
   const handleCloseKambazNav = () => setShowKambazNav(false);
@@ -27,7 +34,7 @@ export default function CoursesLayout({
             <FaAlignJustify />
           </Button>
           <div className="text-center">
-            <small>{courseName}</small>
+            <small>{course?.name || "Loading..."}</small>
           </div>
           <Button
             variant="dark"
@@ -47,12 +54,11 @@ export default function CoursesLayout({
         </div>
       </Collapse>
 
-      {/* Main content area for BOTH mobile and desktop */}
       <div className="p-4">
         <div className="d-none d-md-block">
           <h2 className="text-danger d-flex align-items-center">
             <FaAlignJustify className="me-3" />
-            {courseName}
+            <Breadcrumb course={course} />
           </h2>
           <hr />
         </div>
@@ -61,7 +67,6 @@ export default function CoursesLayout({
           <div className="d-none d-md-block">
             <CourseNavigation />
           </div>
-          {/* FIXED: Added mt-4 mt-md-0 to create space ONLY on mobile */}
           <div
             className="flex-grow-1 mt-4 mt-md-0"
             style={{ marginLeft: "20px" }}
