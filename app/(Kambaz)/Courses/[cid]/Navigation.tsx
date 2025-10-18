@@ -46,7 +46,7 @@ export default function CourseNavigation({
           <ListGroup.Item
             action
             active={isActive(link)}
-            className={`border border-0 ${
+            className={`border-0 ${
               isActive(link) ? "text-black" : "text-danger"
             }`}
             style={{

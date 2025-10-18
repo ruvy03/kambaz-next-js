@@ -15,7 +15,7 @@ export default function AssignmentEditor() {
   const assignments = db.assignments;
 
   // Find the specific assignment
-  const assignment = assignments.find((a: any) => a._id === aid);
+  const assignment = assignments.find((a) => a._id === aid);
 
   // If assignment not found, show error
   if (!assignment) {

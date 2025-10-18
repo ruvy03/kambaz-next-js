@@ -19,7 +19,7 @@ export default function CoursesLayout({
   const [isCourseNavOpen, setIsCourseNavOpen] = useState(false);
 
   useEffect(() => {
-    const foundCourse = db.courses.find((course: any) => course._id === cid);
+    const foundCourse = db.courses.find((course) => course._id === cid);
     setCourse(foundCourse);
   }, [cid]);
 

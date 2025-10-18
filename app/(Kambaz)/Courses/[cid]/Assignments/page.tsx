@@ -11,12 +11,10 @@ export default function Assignments() {
   const { cid } = useParams();
   const assignments = db.assignments;
 
-  // Filter assignments for current course
   const courseAssignments = assignments.filter(
-    (assignment: any) => assignment.course === cid
+    (assignment) => assignment.course === cid
   );
 
-  // Helper function to format date
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
@@ -34,17 +32,15 @@ export default function Assignments() {
     });
   };
 
-  // Group assignments by category
-  const assignmentsByGroup = courseAssignments.reduce(
-    (acc: any, assignment: any) => {
-      if (!acc[assignment.group]) {
-        acc[assignment.group] = [];
-      }
-      acc[assignment.group].push(assignment);
-      return acc;
-    },
-    {}
-  );
+  const assignmentsByGroup = courseAssignments.reduce<
+    Record<string, (typeof courseAssignments)[number][]>
+  >((acc, assignment) => {
+    if (!acc[assignment.group]) {
+      acc[assignment.group] = [];
+    }
+    acc[assignment.group].push(assignment);
+    return acc;
+  }, {});
 
   return (
     <div id="wd-assignments">
@@ -77,74 +73,71 @@ export default function Assignments() {
       </div>
 
       <ListGroup className="rounded-0">
-        {Object.entries(assignmentsByGroup).map(
-          ([group, groupAssignments]: [string, any]) => (
-            <ListGroup.Item
-              key={group}
-              className="p-0 fs-5 border-secondary mt-4"
-              style={{ borderTop: "1px solid #6c757d" }}
+        {Object.entries(assignmentsByGroup).map(([group, groupAssignments]) => (
+          <ListGroup.Item
+            key={group}
+            className="p-0 fs-5 border-secondary mt-4"
+            style={{ borderTop: "1px solid #6c757d" }}
+          >
+            <div
+              className="wd-title p-3 ps-2 d-flex align-items-center"
+              style={{ backgroundColor: "#F2F4F4" }}
             >
-              <div
-                className="wd-title p-3 ps-2 d-flex align-items-center"
-                style={{ backgroundColor: "#F2F4F4" }}
+              <BsGripVertical className="me-2" />
+              <div className="flex-grow-1 fw-bold">{group}</div>
+              <Badge
+                bg=""
+                className="me-2"
+                style={{
+                  border: "1px solid #6c757d",
+                  backgroundColor: "#F2F4F4",
+                  color: "#000",
+                }}
               >
-                <BsGripVertical className="me-2" />
-                <div className="flex-grow-1 fw-bold">{group}</div>
-                <Badge
-                  bg=""
-                  className="me-2"
-                  style={{
-                    border: "1px solid #6c757d",
-                    backgroundColor: "#F2F4F4",
-                    color: "#000",
-                  }}
+                40% of Total
+              </Badge>
+              <span className="float-end">
+                <BsPlusLg className="ms-3" />
+                <BsThreeDotsVertical className="ms-3" />
+              </span>
+            </div>
+            <ListGroup className="rounded-0">
+              {groupAssignments.map((assignment) => (
+                <ListGroup.Item
+                  key={assignment._id}
+                  className="wd-assignment-list-item d-flex align-items-center p-3 ps-4"
+                  style={{ borderLeft: "4px solid green" }}
                 >
-                  40% of Total
-                </Badge>
-                <span className="float-end">
-                  <BsPlusLg className="ms-3" />
-                  <BsThreeDotsVertical className="ms-3" />
-                </span>
-              </div>
-              <ListGroup className="rounded-0">
-                {groupAssignments.map((assignment: any) => (
-                  <ListGroup.Item
-                    key={assignment._id}
-                    className="wd-assignment-list-item d-flex align-items-center p-3 ps-4"
-                    style={{ borderLeft: "4px solid green" }}
-                  >
-                    <BsGripVertical className="me-3" />
-                    <FaFileAlt className="me-3 text-success" />
-                    <div className="flex-grow-1">
-                      <Link
-                        href={`/Courses/${cid}/Assignments/${assignment._id}`}
-                        className="wd-assignment-link text-decoration-none text-dark fw-bold"
-                      >
-                        {assignment.title}
-                      </Link>
-                      <div
-                        className="text-secondary"
-                        style={{ fontSize: "0.9em" }}
-                      >
-                        <span className="text-danger">Multiple Modules</span> |{" "}
-                        <strong>Not available until</strong>{" "}
-                        {formatDate(assignment.availableFrom)} at{" "}
-                        {formatTime(assignment.availableFrom)} |<br />
-                        <strong>Due</strong> {formatDate(assignment.dueDate)} at{" "}
-                        {formatTime(assignment.dueDate)} | {assignment.points}{" "}
-                        pts
-                      </div>
+                  <BsGripVertical className="me-3" />
+                  <FaFileAlt className="me-3 text-success" />
+                  <div className="flex-grow-1">
+                    <Link
+                      href={`/Courses/${cid}/Assignments/${assignment._id}`}
+                      className="wd-assignment-link text-decoration-none text-dark fw-bold"
+                    >
+                      {assignment.title}
+                    </Link>
+                    <div
+                      className="text-secondary"
+                      style={{ fontSize: "0.9em" }}
+                    >
+                      <span className="text-danger">Multiple Modules</span> |{" "}
+                      <strong>Not available until</strong>{" "}
+                      {formatDate(assignment.availableFrom)} at{" "}
+                      {formatTime(assignment.availableFrom)} |<br />
+                      <strong>Due</strong> {formatDate(assignment.dueDate)} at{" "}
+                      {formatTime(assignment.dueDate)} | {assignment.points} pts
                     </div>
-                    <span className="float-end">
-                      <GreenCheckmark />
-                      <BsThreeDotsVertical className="ms-3" />
-                    </span>
-                  </ListGroup.Item>
-                ))}
-              </ListGroup>
-            </ListGroup.Item>
-          )
-        )}
+                  </div>
+                  <span className="float-end">
+                    <GreenCheckmark />
+                    <BsThreeDotsVertical className="ms-3" />
+                  </span>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </ListGroup.Item>
+        ))}
       </ListGroup>
     </div>
   );
