@@ -10,11 +10,21 @@ import * as db from "../../Database";
 import Breadcrumb from "./Breadcrumb/page";
 import CourseNavigation from "./Navigation";
 
+type Course = {
+  _id: string;
+  name: string;
+  number: string;
+  image: string;
+  fit?: string;
+  description: string;
+  term: string;
+};
+
 export default function CoursesLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   const { cid } = useParams();
-  const [course, setCourse] = useState<any>(null);
+  const [course, setCourse] = useState<Course | undefined>(undefined);
   const [showKambazNav, setShowKambazNav] = useState(false);
   const [isCourseNavOpen, setIsCourseNavOpen] = useState(false);
 
