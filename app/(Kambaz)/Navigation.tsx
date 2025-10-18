@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
@@ -26,9 +27,15 @@ export default function KambazNavigation() {
         target="_blank"
         href="https://www.northeastern.edu/"
         action
+        rel="noreferrer noopener"
         className="bg-black border-0 text-center"
       >
-        <img src="/images/NEU.png" width="75px" />
+        <Image
+          src="/images/NEU.png"
+          width={75}
+          height={75}
+          alt="Northeastern University"
+        />
       </ListGroupItem>
       <ListGroupItem
         as={Link}
