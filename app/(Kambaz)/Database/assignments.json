@@ -1,0 +1,233 @@
+[
+  {
+    "_id": "A101",
+    "title": "A1 - React Components",
+    "course": "1234",
+    "description": "Create a React application with multiple functional components. Implement props, state management with useState, and component composition. The assignment should demonstrate understanding of React fundamentals including JSX, component lifecycle, and event handling.",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59",
+    "availableFrom": "2024-05-06T00:00",
+    "availableUntil": "2024-05-20T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A102",
+    "title": "A2 - React Hooks & Routing",
+    "course": "1234",
+    "description": "Build a multi-page React application using React Router. Implement useEffect for side effects, useContext for global state, and custom hooks. Include navigation, dynamic routing, and route parameters.",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59",
+    "availableFrom": "2024-05-13T00:00",
+    "availableUntil": "2024-05-27T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A103",
+    "title": "A3 - Full Stack React Application",
+    "course": "1234",
+    "description": "Develop a complete full-stack application with React frontend and Node.js backend. Implement CRUD operations, API integration, authentication, and deployment to Vercel/Netlify.",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59",
+    "availableFrom": "2024-05-20T00:00",
+    "availableUntil": "2024-06-03T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A201",
+    "title": "A1 - Intelligent Agents",
+    "course": "4321",
+    "description": "Implement an intelligent agent that can perceive its environment and take actions to achieve goals. Design agents with different architectures (simple reflex, model-based, goal-based) and compare their performance.",
+    "points": 100,
+    "dueDate": "2024-05-15T23:59",
+    "availableFrom": "2024-05-08T00:00",
+    "availableUntil": "2024-05-22T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A202",
+    "title": "A2 - Search Algorithms",
+    "course": "4321",
+    "description": "Implement uninformed search (BFS, DFS, UCS) and informed search algorithms (A*, Greedy). Apply them to pathfinding problems and analyze their performance in terms of completeness, optimality, time and space complexity.",
+    "points": 100,
+    "dueDate": "2024-05-22T23:59",
+    "availableFrom": "2024-05-15T00:00",
+    "availableUntil": "2024-05-29T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A203",
+    "title": "A3 - Knowledge & Reasoning",
+    "course": "4321",
+    "description": "Build a knowledge-based system using propositional and first-order logic. Implement inference algorithms and demonstrate logical reasoning capabilities for problem-solving tasks.",
+    "points": 100,
+    "dueDate": "2024-05-29T23:59",
+    "availableFrom": "2024-05-22T00:00",
+    "availableUntil": "2024-06-05T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A301",
+    "title": "A1 - Linear Regression",
+    "course": "8765",
+    "description": "Implement linear regression from scratch using gradient descent. Train on housing price dataset, evaluate using MSE and R-squared metrics. Compare your implementation with sklearn's LinearRegression.",
+    "points": 100,
+    "dueDate": "2024-05-14T23:59",
+    "availableFrom": "2024-05-07T00:00",
+    "availableUntil": "2024-05-21T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A302",
+    "title": "A2 - Neural Networks",
+    "course": "8765",
+    "description": "Build a feedforward neural network with backpropagation from scratch. Train on MNIST dataset for digit classification. Implement activation functions, loss calculation, and weight updates.",
+    "points": 100,
+    "dueDate": "2024-05-21T23:59",
+    "availableFrom": "2024-05-14T00:00",
+    "availableUntil": "2024-05-28T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A303",
+    "title": "A3 - Deep Learning Project",
+    "course": "8765",
+    "description": "Design and train a deep learning model using TensorFlow or PyTorch. Implement CNN or RNN architecture, use transfer learning, and apply regularization techniques. Present findings with visualizations.",
+    "points": 100,
+    "dueDate": "2024-05-28T23:59",
+    "availableFrom": "2024-05-21T00:00",
+    "availableUntil": "2024-06-04T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A401",
+    "title": "A1 - HTML & CSS Fundamentals",
+    "course": "5678",
+    "description": "Create a multi-page personal portfolio website using semantic HTML5 and modern CSS3. Implement flexbox and grid layouts, CSS animations, and ensure cross-browser compatibility.",
+    "points": 100,
+    "dueDate": "2024-05-12T23:59",
+    "availableFrom": "2024-05-05T00:00",
+    "availableUntil": "2024-05-19T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A402",
+    "title": "A2 - JavaScript & DOM",
+    "course": "5678",
+    "description": "Build an interactive web application using vanilla JavaScript. Implement DOM manipulation, event listeners, local storage, and fetch API for dynamic content loading.",
+    "points": 100,
+    "dueDate": "2024-05-19T23:59",
+    "availableFrom": "2024-05-12T00:00",
+    "availableUntil": "2024-05-26T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A403",
+    "title": "A3 - Responsive Web App",
+    "course": "5678",
+    "description": "Create a fully responsive single-page application using modern web technologies. Implement mobile-first design, progressive enhancement, accessibility (WCAG), and optimize performance.",
+    "points": 100,
+    "dueDate": "2024-05-26T23:59",
+    "availableFrom": "2024-05-19T00:00",
+    "availableUntil": "2024-06-02T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A501",
+    "title": "A1 - OOP Design Patterns",
+    "course": "9101",
+    "description": "Implement common design patterns (Singleton, Factory, Observer, Strategy) in Java or Python. Demonstrate SOLID principles and explain when to use each pattern with real-world examples.",
+    "points": 100,
+    "dueDate": "2024-05-16T23:59",
+    "availableFrom": "2024-05-09T00:00",
+    "availableUntil": "2024-05-23T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A502",
+    "title": "A2 - Functional Programming",
+    "course": "9101",
+    "description": "Solve programming challenges using functional programming paradigms. Implement higher-order functions, immutability, recursion, and monads in Haskell or Scala.",
+    "points": 100,
+    "dueDate": "2024-05-23T23:59",
+    "availableFrom": "2024-05-16T00:00",
+    "availableUntil": "2024-05-30T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A503",
+    "title": "A3 - Testing & TDD",
+    "course": "9101",
+    "description": "Write comprehensive unit tests using Test-Driven Development (TDD) methodology. Implement test fixtures, mocks, and achieve 90%+ code coverage using JUnit or pytest.",
+    "points": 100,
+    "dueDate": "2024-05-30T23:59",
+    "availableFrom": "2024-05-23T00:00",
+    "availableUntil": "2024-06-06T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A601",
+    "title": "A1 - Algorithm Complexity Analysis",
+    "course": "1121",
+    "description": "Analyze time and space complexity of various algorithms using Big O notation. Prove correctness using loop invariants and mathematical induction. Compare empirical vs theoretical performance.",
+    "points": 100,
+    "dueDate": "2024-05-11T23:59",
+    "availableFrom": "2024-05-04T00:00",
+    "availableUntil": "2024-05-18T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A602",
+    "title": "A2 - Sorting & Searching",
+    "course": "1121",
+    "description": "Implement QuickSort, MergeSort, HeapSort and analyze their performance. Implement binary search variations and hash tables. Benchmark with different input sizes and patterns.",
+    "points": 100,
+    "dueDate": "2024-05-18T23:59",
+    "availableFrom": "2024-05-11T00:00",
+    "availableUntil": "2024-05-25T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A603",
+    "title": "A3 - Graph Algorithms",
+    "course": "1121",
+    "description": "Implement graph algorithms including BFS, DFS, Dijkstra's shortest path, Kruskal's MST, and topological sort. Apply to real-world problems like route planning and network analysis.",
+    "points": 100,
+    "dueDate": "2024-05-25T23:59",
+    "availableFrom": "2024-05-18T00:00",
+    "availableUntil": "2024-06-01T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A701",
+    "title": "A1 - Database Design & ER Modeling",
+    "course": "3141",
+    "description": "Design a relational database for a library management system. Create ER diagrams, normalize to 3NF/BCNF, define primary and foreign keys, and document all design decisions.",
+    "points": 100,
+    "dueDate": "2024-05-17T23:59",
+    "availableFrom": "2024-05-10T00:00",
+    "availableUntil": "2024-05-24T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A702",
+    "title": "A2 - SQL Queries & Optimization",
+    "course": "3141",
+    "description": "Write complex SQL queries with joins, subqueries, aggregations, and window functions. Analyze query execution plans and optimize slow queries using indexes and query rewriting.",
+    "points": 100,
+    "dueDate": "2024-05-24T23:59",
+    "availableFrom": "2024-05-17T00:00",
+    "availableUntil": "2024-05-31T23:59",
+    "group": "ASSIGNMENTS"
+  },
+  {
+    "_id": "A703",
+    "title": "A3 - Transactions & Concurrency",
+    "course": "3141",
+    "description": "Implement transaction management demonstrating ACID properties. Handle concurrent transactions, implement locking mechanisms, and resolve deadlocks. Use PostgreSQL or MySQL.",
+    "points": 100,
+    "dueDate": "2024-05-31T23:59",
+    "availableFrom": "2024-05-24T00:00",
+    "availableUntil": "2024-06-07T23:59",
+    "group": "ASSIGNMENTS"
+  }
+]

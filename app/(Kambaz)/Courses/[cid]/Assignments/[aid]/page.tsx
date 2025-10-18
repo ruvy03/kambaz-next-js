@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import {
   Button,
   FormCheck,
@@ -6,13 +8,43 @@ import {
   FormLabel,
   FormSelect,
 } from "react-bootstrap";
+import * as db from "../../../../Database";
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();
+  const assignments = db.assignments;
+
+  // Find the specific assignment
+  const assignment = assignments.find((a: any) => a._id === aid);
+
+  // If assignment not found, show error
+  if (!assignment) {
+    return (
+      <div className="container-fluid px-4">
+        <h3>Assignment not found</h3>
+        <Link href={`/Courses/${cid}/Assignments`}>
+          <Button variant="danger">Back to Assignments</Button>
+        </Link>
+      </div>
+    );
+  }
+
+  // Format date for datetime-local input
+  const formatDateForInput = (dateString: string) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+  };
+
   return (
     <div id="wd-assignments-editor" className="container-fluid px-4">
       <div className="mb-3">
         <FormLabel htmlFor="wd-name">Assignment Name</FormLabel>
-        <FormControl id="wd-name" defaultValue="A1 - ENV + HTML" />
+        <FormControl id="wd-name" defaultValue={assignment.title} />
       </div>
 
       <div className="mb-3">
@@ -20,7 +52,7 @@ export default function AssignmentEditor() {
           as="textarea"
           id="wd-description"
           rows={8}
-          defaultValue="The assignment is available online Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section Links to each of the lab assignments Link to the Kanbas application Links to all relevant source code repositories The Kanbas application should include a link to navigate back to the landing page."
+          defaultValue={assignment.description}
         />
       </div>
 
@@ -31,7 +63,7 @@ export default function AssignmentEditor() {
           </FormLabel>
         </div>
         <div className="col-md-9">
-          <FormControl id="wd-points" defaultValue={100} />
+          <FormControl id="wd-points" defaultValue={assignment.points} />
         </div>
       </div>
 
@@ -42,7 +74,10 @@ export default function AssignmentEditor() {
           </FormLabel>
         </div>
         <div className="col-md-9">
-          <FormSelect id="wd-group" defaultValue="assignments">
+          <FormSelect
+            id="wd-group"
+            defaultValue={assignment.group.toLowerCase()}
+          >
             <option value="assignments">ASSIGNMENTS</option>
             <option value="quizzes">QUIZZES</option>
             <option value="exams">EXAMS</option>
@@ -167,7 +202,7 @@ export default function AssignmentEditor() {
               <FormControl
                 type="datetime-local"
                 id="wd-due-date"
-                defaultValue="2024-05-13T23:59"
+                defaultValue={formatDateForInput(assignment.dueDate)}
               />
             </div>
 
@@ -179,7 +214,7 @@ export default function AssignmentEditor() {
                 <FormControl
                   type="datetime-local"
                   id="wd-available-from"
-                  defaultValue="2024-05-06T00:00"
+                  defaultValue={formatDateForInput(assignment.availableFrom)}
                 />
               </div>
               <div className="col-md-6 mb-3">
@@ -189,7 +224,7 @@ export default function AssignmentEditor() {
                 <FormControl
                   type="datetime-local"
                   id="wd-available-until"
-                  defaultValue="2024-05-20T23:59"
+                  defaultValue={formatDateForInput(assignment.availableUntil)}
                 />
               </div>
             </div>
@@ -200,17 +235,21 @@ export default function AssignmentEditor() {
       <hr />
 
       <div className="d-flex justify-content-end mb-3">
-        <Button
-          style={{
-            backgroundColor: "#F2F4F4",
-            color: "#000",
-            border: "1px solid #ced4da",
-          }}
-          className="me-2"
-        >
-          Cancel
-        </Button>
-        <Button variant="danger">Save</Button>
+        <Link href={`/Courses/${cid}/Assignments`}>
+          <Button
+            style={{
+              backgroundColor: "#F2F4F4",
+              color: "#000",
+              border: "1px solid #ced4da",
+            }}
+            className="me-2"
+          >
+            Cancel
+          </Button>
+        </Link>
+        <Link href={`/Courses/${cid}/Assignments`}>
+          <Button variant="danger">Save</Button>
+        </Link>
       </div>
     </div>
   );
